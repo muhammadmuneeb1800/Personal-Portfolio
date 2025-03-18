@@ -5,15 +5,65 @@ import img from "../../../public/images/m.jpg";
 import { FaDownload, FaWhatsapp } from "react-icons/fa6";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import Link from "next/link";
+import { LINKS_ICONS } from "@/constants/constants";
 
 export default function Home() {
   const number = "923251191492";
   const message = "Hello! I found your profile interesting. Can we connect?";
   const encodedMessage = encodeURIComponent(message);
   return (
-    <div className="px-5 md:px-10">
+    <div className="px-5 md:px-15 bg-[#00040f]">
       <Navbar />
       <section className="mt-20 w-full flex justify-center gap-10 items-center">
+        <div className="w-[60%]">
+          <p className="text-cyan-500">Full Stack Developer--</p>
+          <div>
+            <h1 className="text-3xl text-white mt-2 md:text-4xl lg:text-7xl leading-24 font-bold">
+              Hi there!
+            </h1>
+            <h1 className="text-3xl text-white md:text-4xl leading-20 -mt-2 lg:text-7xl font-bold">
+              i am
+            </h1>
+            <h1 className="text-3xl bg-gradient-to-r from-cyan-500 to-cyan-200 bg-clip-text text-transparent md:text-4xl leading-20 lg:text-7xl font-bold">
+              Muhammad Muneeb
+            </h1>
+          </div>
+          <p className="text-lg mt-5 leading-8 text-gray-400 md:text-xl font-light">
+            Turning ideas into reality—A Pakistani Software Developer on a
+            mission to build, innovate, and inspire. Crafting scalable,
+            efficient, and user-friendly applications.I offer the best projects
+            resulting in quality work.
+          </p>
+          <div className="flex items-center gap-6 mt-6">
+            {LINKS_ICONS.map(({ key, href, Icon }) => (
+              <Link
+                key={key}
+                href={href}
+                target="_Blank"
+                className="text-white text-2xl hover:scale-125 hover:text-cyan-300 duration-700 transition-all"
+              >
+                {<Icon />}
+              </Link>
+            ))}
+          </div>
+          <div className="flex items-center mt-8 gap-10">
+            <Link
+              href={`https://wa.me/${number}?text=${encodedMessage}`}
+              target="_Blank"
+              className="group flex shadow-2xl hover:scale-105 items-center gap-2 border bg-cyan-600 border-cyan-700 text-xl font-semibold px-6 py-2 rounded-3xl text-white cursor-pointer transition-all duration-700"
+            >
+              <p>CV</p>
+            </Link>
+            <Link
+              href="/path-to-resume.pdf"
+              download
+              className="group flex items-center shadow-2xl gap-2 border-2 border-amber-700 hover:border-amber-900 text-xl font-semibold px-6 py-2 rounded-3xl text-amber-700 cursor-pointer transition-all duration-500 hover:scale-105"
+            >
+              <span>Get Resume</span>
+              <FaDownload className="text-[20px] group-hover:animate-bounce" />
+            </Link>
+          </div>
+        </div>
         <div className="w-[40%] flex justify-end">
           <div className="p-1 shadow-2xl border-8 border-black rounded-full">
             <Image
@@ -23,41 +73,6 @@ export default function Home() {
               height={400}
               className="rounded-full border-8 border-amber-900"
             />
-          </div>
-        </div>
-        <div className="w-[60%]">
-          <p>Full Stack Developer--</p>
-          <h1 className="text-3xl mt-2 md:text-4xl lg:text-5xl font-extrabold leading-tight">
-            Muhammad Muneeb
-          </h1>
-          <p className="text-lg mt-10 md:text-xl font-light">
-            Full Stack Developer specializing in{" "}
-            <strong className="font-bold">React.js</strong>,{"   "}
-            <strong className="font-bold">Next.js</strong>,{"  "}
-            <strong className="font-bold">React Native</strong>,{"  "}
-            <strong className="font-bold">TypeScript</strong>, and modern
-            frameworks. Crafting scalable, efficient, and user-friendly
-            applications.I offer the best projects resulting in quality work.
-          </p>
-          <p className="mt-2">Let&rsquo;s build something amazing together!</p>
-          <div className="flex items-center mt-20 gap-10">
-            <Link
-              href={`https://wa.me/${number}?text=${encodedMessage}`}
-              target="_Blank"
-              className="group flex shadow-2xl hover:scale-105 items-center gap-2 border bg-amber-600 border-amber-700 hover:bg-amber-900 text-xl font-semibold px-6 py-2 rounded-3xl text-white cursor-pointer transition-all duration-700"
-            >
-              <FaWhatsapp className="text-2xl" />
-              <p>Let&rsquo;s Talk</p>
-              <HiArrowNarrowRight className="text-2xl group-hover:translate-x-2 transition-transform duration-500" />
-            </Link>
-            <Link
-              href="/path-to-resume.pdf" // Replace with the actual path to your resume
-              download
-              className="group flex items-center shadow-2xl gap-2 border-2 border-amber-700 hover:border-amber-900 text-xl font-semibold px-6 py-2 rounded-3xl text-amber-700 cursor-pointer transition-all duration-500 hover:scale-105"
-            >
-              <span>Get Resume</span>
-              <FaDownload className="text-[20px] group-hover:animate-bounce" />
-            </Link>
           </div>
         </div>
       </section>
