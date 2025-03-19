@@ -1,11 +1,10 @@
-import Navbar from "@/components/navbar/Navbar";
-import Image from "next/image";
 import React from "react";
-import img from "../../../public/images/m.jpg";
-import { FaDownload, FaWhatsapp } from "react-icons/fa6";
-import { HiArrowNarrowRight } from "react-icons/hi";
 import Link from "next/link";
+import Navbar from "@/components/navbar/Navbar";
+import { FaDownload } from "react-icons/fa6";
 import { LINKS_ICONS } from "@/constants/constants";
+import MyAnimation from "@/components/myAnimation/MyAnimation";
+import { AiOutlineFilePdf } from "react-icons/ai";
 
 export default function Home() {
   const number = "923251191492";
@@ -14,7 +13,7 @@ export default function Home() {
   return (
     <div className="px-5 md:px-15 bg-[#00040f]">
       <Navbar />
-      <section className="mt-20 w-full flex justify-center gap-10 items-center">
+      <section className="mt-16 w-full flex justify-between gap-10 items-center">
         <div className="w-[60%]">
           <p className="text-cyan-500">Full Stack Developer--</p>
           <div>
@@ -22,7 +21,7 @@ export default function Home() {
               Hi there!
             </h1>
             <h1 className="text-3xl text-white md:text-4xl leading-20 -mt-2 lg:text-7xl font-bold">
-              i am
+              I am
             </h1>
             <h1 className="text-3xl bg-gradient-to-r from-cyan-500 to-cyan-200 bg-clip-text text-transparent md:text-4xl leading-20 lg:text-7xl font-bold">
               Muhammad Muneeb
@@ -50,35 +49,28 @@ export default function Home() {
             <Link
               href={`https://wa.me/${number}?text=${encodedMessage}`}
               target="_Blank"
-              className="group flex shadow-2xl hover:scale-105 items-center gap-2 border bg-cyan-600 border-cyan-700 text-xl font-semibold px-6 py-2 rounded-3xl text-white cursor-pointer transition-all duration-700"
+              className="group flex shadow-2xl hover:scale-125 items-center gap-1 border bg-cyan-600 border-cyan-700 text-base font-semibold px-6 py-2 rounded-3xl text-black cursor-pointer transition-all duration-700"
             >
+              <AiOutlineFilePdf className="text-sm" />
               <p>CV</p>
             </Link>
             <Link
-              href="/path-to-resume.pdf"
-              download
-              className="group flex items-center shadow-2xl gap-2 border-2 border-amber-700 hover:border-amber-900 text-xl font-semibold px-6 py-2 rounded-3xl text-amber-700 cursor-pointer transition-all duration-500 hover:scale-105"
+              href={`https://wa.me/${number}?text=${encodedMessage}`}
+              target="_Blank"
+              className="group flex shadow-2xl hover:scale-125 items-center gap-1 border bg-cyan-600 border-cyan-700 text-base font-semibold px-6 py-2 rounded-3xl text-black cursor-pointer transition-all duration-700"
             >
-              <span>Get Resume</span>
-              <FaDownload className="text-[20px] group-hover:animate-bounce" />
+              <AiOutlineFilePdf className="text-sm" />
+              <p></p>
             </Link>
           </div>
         </div>
         <div className="w-[40%] flex justify-end">
-          <div className="p-1 shadow-2xl border-8 border-black rounded-full">
-            <Image
-              src={img}
-              alt="hero image"
-              width={400}
-              height={400}
-              className="rounded-full border-8 border-amber-900"
-            />
+          <div className="w-full">
+            <MyAnimation />
           </div>
         </div>
       </section>
-
       {/* About me section */}
-
       <section className="mt-20 w-full flex justify-between items-center">
         <div className="w-[60%] justify-end">
           <h2 className="text-2xl md:text-3xl font-semibold leading-tight">
