@@ -1,10 +1,12 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
-import Navbar from "@/components/navbar/Navbar";
-import { FaDownload } from "react-icons/fa6";
-import { LINKS_ICONS } from "@/constants/constants";
-import MyAnimation from "@/components/myAnimation/MyAnimation";
 import { AiOutlineFilePdf } from "react-icons/ai";
+import MyAnimation from "@/components/myAnimation/MyAnimation";
+import Navbar from "@/components/navbar/Navbar";
+import { LINKS_ICONS } from "@/constants/constants";
+import img from "../../../public/images/m.jpg";
+import Stats from "@/components/counter/Counter";
 
 export default function Home() {
   const number = "923251191492";
@@ -60,7 +62,7 @@ export default function Home() {
               className="group flex shadow-2xl hover:scale-125 items-center gap-1 border bg-cyan-600 border-cyan-700 text-base font-semibold px-6 py-2 rounded-3xl text-black cursor-pointer transition-all duration-700"
             >
               <AiOutlineFilePdf className="text-sm" />
-              <p></p>
+              <p>Start</p>
             </Link>
           </div>
         </div>
@@ -72,45 +74,59 @@ export default function Home() {
       </section>
       {/* About me section */}
       <section className="mt-20 w-full flex justify-between items-center">
-        <div className="w-[60%] justify-end">
-          <h2 className="text-2xl md:text-3xl font-semibold leading-tight">
+        <div className="w-[60%]">
+          <h2 className="text-3xl text-white mt-2 md:text-4xl lg:text-6xl leading-24 font-bold">
             About Me
           </h2>
-          <p className="text-lg md:text-xl font-light mt-5">
-            About Me I&rsquo;m Muhammad Muneeb, a dedicated and passionate Web
-            and Mobile App Developer with a strong foundation in modern
-            technologies like Next.js, React Native, TypeScript, Prisma, and
-            GraphQL. My journey in development started with a deep curiosity
-            about how digital products are built, which soon transformed into a
-            passion for creating user-friendly, efficient, and scalable
-            applications. Over time, I&rsquo;ve honed my skills by working on
-            diverse projects, ranging from simple web designs to complex
-            applications. I&rsquo;ve gained hands-on experience in both frontend
-            and backend development, specializing in frameworks like React,
-            Next.js, and building robust APIs using TypeGraphQL and Prisma. My
-            experience also extends to database management with MongoDB and
-            PostgreSQL, ensuring data is handled securely and efficiently. One
-            of my proudest achievements includes participating in the TechloSet
-            Bootcamp, where I worked on real-world projects, collaborated with
-            peers, and learned best practices for writing clean and maintainable
-            code. I&rsquo;ve also developed a task management app using React
-            Native, and I&rsquo;m currently working on building dynamic data
-            visualization with charts in Next.js. I believe in writing clean,
-            scalable, and maintainable code, focusing on performance and user
-            experience. Whether it&rsquo;s building authentication systems with
-            JWT, OAuth, integrating databases, or developing dynamic UIs, I
-            approach every challenge with dedication and a problem-solving
-            mindset. Looking ahead, I aim to deepen my expertise in backend
-            development, explore more about GraphQL APIs, and take on projects
-            that challenge my skills and push my creative boundaries. When
-            I&rsquo;m not coding, I enjoy learning about the latest trends in
-            technology, enhancing my skills, and contributing to the development
-            community. I&rsquo;m always open to exciting projects and
-            collaborations, so let&rsquo;s connect and build something amazing
-            together! 🚀
+          <p className="text-gray-400 text-[19px] font-light mt-7 leading-[29px]">
+            My name is{" "}
+            <span className="text-teal-500 font-bold">Muhammad Muneeb</span>. I
+            am a software engineer with a passion for problem-solving, creating
+            efficient solutions, and exploring new technologies. With experience
+            in{" "}
+            <span className="text-teal-500 font-bold">
+              JavaScript, React and backend development
+            </span>
+            , I enjoy building scalable, user-focused applications.
+          </p>
+          <p className="text-gray-400 text-[19px] font-light mt-5 leading-[29px]">
+            I&rsquo;m , a dedicated and passionate full-stack{" "}
+            <span className="text-teal-500 font-bold">web apps (MERN) </span>{" "}
+            and{" "}
+            <span className="text-teal-500 font-bold">
+              mobile apps (React Native)
+            </span>{" "}
+            software engineer from Faisalabad, PK. I have a strong foundation in
+            modern technologies like{" "}
+            <span className="text-teal-500 font-bold">
+              next.js, react native, typescript, prisma{" "}
+            </span>
+            and <span className="text-teal-500 font-bold">graphQL</span>. My
+            experience also extends to database management with{" "}
+            <span className="text-teal-500 font-bold">firebase, mongoDB</span>{" "}
+            and <span className="text-teal-500 font-bold">postgreSQL</span>
+            ensuring data is handled securely and efficiently.
+          </p>
+          <p className="text-gray-400 text-[19px] font-light mt-7 leading-[29px]">
+            I am currently pursuing a BS in Computer Science from{" "}
+            <span className="text-teal-500 font-bold">
+              Virtual University, Pakistan
+            </span>
+            , and I am also associated with{" "}
+            <span className="text-teal-500 font-bold">TechloSet Solutions</span>
+            , where I continue to refine my skills and gain industry-relevant
+            experience.
           </p>
         </div>
-        <div>gglgl</div>
+        <div className="w-[30%] mt-20 -mr-14 flex justify-end items-center">
+          <div className="border-4 border-teal-400">
+            <Image src={img} alt="My-self" width={210} height={210} />
+          </div>
+        </div>
+      </section>
+      {/* Counter section */}
+      <section className="mt-28">
+        <Stats />
       </section>
     </div>
   );
