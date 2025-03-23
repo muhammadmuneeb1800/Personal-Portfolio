@@ -4,7 +4,7 @@ import { NAV_LINKS } from "@/constants/constants";
 
 export default function Navbar() {
   return (
-    <nav>
+    <nav className="px-5 md:px-15 bg-[#00040f]">
       <div className="flex justify-between items-center py-5">
         <div className="flex items-center gap-1 select-none">
           <p className="text-cyan-300 text-4xl font-bold">{"{"}</p>

@@ -1,6 +1,9 @@
-import { FaHome, FaLinkedin, FaPhone } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import { AiOutlinePhone } from "react-icons/ai";
+import { GoMail } from "react-icons/go";
+import { RxHome } from "react-icons/rx";
 
 export const LINKS_ICONS = [
   {
@@ -21,7 +24,12 @@ export const NAV_LINKS = [
 ];
 
 export const FOOTER_DATA = [
-  { icon: FaPhone, title: "Phone", text: "+92 3251191492" },
-  { icon: IoMdMail, title: "Email", text: "muhammadmuneeb1800@gmail.com" },
-  { icon: FaHome, title: "Location", text: "Faisalabad, Pakistan" },
+  { key: 1, Icon: AiOutlinePhone, title: "Phone", text: "+92 3251191492" },
+  {
+    key: 2,
+    Icon: GoMail,
+    title: "Email",
+    text: "muhammadmuneeb1800@gmail.com",
+  },
+  { key: 3, Icon: RxHome, title: "Location", text: "Faisalabad, Pakistan" },
 ];
