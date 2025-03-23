@@ -3,7 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineFilePdf } from "react-icons/ai";
 import MyAnimation from "@/components/myAnimation/MyAnimation";
-import { FOOTER_DATA, LINKS_ICONS } from "@/constants/constants";
+import {
+  FOOTER_DATA,
+  LINKS_ICONS,
+  PROGRAMMIMG_LANGUAGES,
+} from "@/constants/constants";
 import img from "../../../public/images/m.jpg";
 import Stats from "@/components/counter/Counter";
 import { FaGithub } from "react-icons/fa6";
@@ -40,7 +44,7 @@ export default function Home() {
                 key={key}
                 href={href}
                 target="_Blank"
-                className="text-white text-2xl hover:scale-125 hover:text-cyan-300 duration-700 transition-all"
+                className="text-white text-2xl hover:scale-125 hover:text-teal-300 duration-700 transition-all"
               >
                 {<Icon />}
               </Link>
@@ -74,8 +78,9 @@ export default function Home() {
       {/* About me section */}
       <section className="mt-20 -ml-5 w-full flex justify-between items-center">
         <div className="w-[60%]">
-          <h2 className="text-3xl text-white mt-2 md:text-4xl lg:text-5xl leading-24 font-bold">
+          <h2 className="text-3xl relative group transition-all duration-500 text-white mt-2 md:text-4xl lg:text-5xl mb-10 font-bold">
             About Me
+            <span className="absolute -bottom-2 left-0 w-0 h-1 bg-teal-400 transition-all duration-1000 group-hover:w-[15%]"></span>
           </h2>
           <p className="text-gray-400 text-[19px] font-light mt-4 leading-[29px]">
             My name is{" "}
@@ -127,10 +132,39 @@ export default function Home() {
       <section className="mt-28">
         <Stats />
       </section>
+      {/* Skill and Experience */}
+      <section className="mt-20">
+        <h1 className="text-3xl relative group text-white mt-5 md:text-4xl lg:text-5xl font-bold">
+          Skills & Experience
+          <span className="absolute -bottom-2 left-0 w-0 h-1 transition-all duration-1000 group-hover:w-[20%] bg-teal-400"></span>
+        </h1>
+        <div className="w-[50%] mt-40">
+          <div className="border-l-2 pl-8 py-2 border-teal-400">
+            <div className="flex mb-7 items-center gap-6">
+              <div className="bg-white -ml-[38.5px] w-3 h-3 rounded-full"></div>
+              <h1 className="text-lg font-semibold bg-gradient-to-r from-cyan-500 to-cyan-200 bg-clip-text text-transparent md:text-xl lg:text-2xl">
+                Programming Languages
+              </h1>
+            </div>
+            <div className="flex flex-wrap justify-around items-center gap-12 w-[50%]">
+              {PROGRAMMIMG_LANGUAGES.map(({ key, Icon, title }) => (
+                <div
+                  key={key}
+                  className="text-gray-400 hover:text-teal-400 transition-all duration-500"
+                >
+                  <Icon className="text-4xl" />
+                  <p className="text-gray-400 text-sm">{title}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Contact section */}
       <section className="mt-40 text-gray-400 pb-16 px-10">
-        <h1 className="text-3xl text-white md:text-4xl font-semibold lg:text-5xl">
+        <h1 className="text-3xl relative group text-white md:text-4xl font-semibold lg:text-5xl">
           LET&#39;S CONNECT!
+          <span className="absolute -bottom-2 left-0 w-0 h-1 transition-all duration-1000 group-hover:w-[20%] bg-teal-400"></span>
         </h1>
         <div className="mt-12 flex justify-between items-center gap-14">
           <div className="w-[50%] p-7 rounded-lg bg-[#111827]">
