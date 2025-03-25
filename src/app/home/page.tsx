@@ -6,11 +6,16 @@ import MyAnimation from "@/components/myAnimation/MyAnimation";
 import {
   FOOTER_DATA,
   LINKS_ICONS,
+  PROGRAMMIMG_FRAMWORS,
   PROGRAMMIMG_LANGUAGES,
+  TOOLS,
 } from "@/constants/constants";
 import img from "../../../public/images/m.jpg";
+import anSofto from "../../../public/images/softo.jpeg";
 import Stats from "@/components/counter/Counter";
 import { FaGithub } from "react-icons/fa6";
+import EducationAni from "@/components/educationAni/EducationAni";
+import EducationCard from "@/components/educationCard/EducationCard";
 
 export default function Home() {
   const number = "923251191492";
@@ -76,9 +81,9 @@ export default function Home() {
         </div>
       </section>
       {/* About me section */}
-      <section className="mt-20 -ml-5 w-full flex justify-between items-center">
+      <section className="mt-36 -ml-5 w-full flex justify-between items-center">
         <div className="w-[60%]">
-          <h2 className="text-3xl relative group transition-all duration-500 text-white mt-2 md:text-4xl lg:text-5xl mb-10 font-bold">
+          <h2 className="text-3xl w-[30%] relative group transition-all duration-500 text-white mt-2 md:text-4xl lg:text-5xl mb-10 font-bold">
             About Me
             <span className="absolute -bottom-2 left-0 w-0 h-1 bg-teal-400 transition-all duration-1000 group-hover:w-[15%]"></span>
           </h2>
@@ -129,40 +134,232 @@ export default function Home() {
         </div>
       </section>
       {/* Counter section */}
-      <section className="mt-28">
+      <section className="mt-36">
         <Stats />
       </section>
       {/* Skill and Experience */}
-      <section className="mt-20">
-        <h1 className="text-3xl relative group text-white mt-5 md:text-4xl lg:text-5xl font-bold">
+      <section className="mt-40">
+        <h1 className="text-3xl mb-36 w-[35%] relative group text-white mt-5 md:text-4xl lg:text-5xl font-bold">
           Skills & Experience
           <span className="absolute -bottom-2 left-0 w-0 h-1 transition-all duration-1000 group-hover:w-[20%] bg-teal-400"></span>
         </h1>
-        <div className="w-[50%] mt-40">
-          <div className="border-l-2 pl-8 py-2 border-teal-400">
-            <div className="flex mb-7 items-center gap-6">
-              <div className="bg-white -ml-[38.5px] w-3 h-3 rounded-full"></div>
-              <h1 className="text-lg font-semibold bg-gradient-to-r from-cyan-500 to-cyan-200 bg-clip-text text-transparent md:text-xl lg:text-2xl">
-                Programming Languages
-              </h1>
+        <div className="flex justify-between mx-5">
+          <div className="w-[50%]">
+            <div className="border-l-1 pl-7 py-2 border-teal-200">
+              <div className="flex mb-7 items-center gap-6">
+                <div className="bg-white -ml-[35px] w-3 h-3 rounded-full"></div>
+                <h1 className="text-[18px] font-semibold bg-gradient-to-r from-cyan-500 to-cyan-200 bg-clip-text text-transparent md:text-[19px] lg:text-[21px]">
+                  Programming Languages
+                </h1>
+              </div>
+              <div className="flex flex-wrap justify-around items-center gap-12 w-[50%]">
+                {PROGRAMMIMG_LANGUAGES.map(({ key, Icon, title }) => (
+                  <div
+                    key={key}
+                    className="text-gray-200 hover:text-teal-400 transition-all duration-500"
+                  >
+                    <Icon className="text-[30px]" />
+                    <p className="text-gray-400 mt-1 text-[13px]">{title}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="flex flex-wrap justify-around items-center gap-12 w-[50%]">
-              {PROGRAMMIMG_LANGUAGES.map(({ key, Icon, title }) => (
-                <div
-                  key={key}
-                  className="text-gray-400 hover:text-teal-400 transition-all duration-500"
-                >
-                  <Icon className="text-4xl" />
-                  <p className="text-gray-400 text-sm">{title}</p>
+            <div className="border-l-1 pl-7 mt-12 py-2 border-teal-200">
+              <div className="flex mb-7 items-center gap-6">
+                <div className="bg-white -ml-[35px] w-3 h-3 rounded-full"></div>
+                <h1 className="text-[18px] font-semibold bg-gradient-to-r from-cyan-500 to-cyan-200 bg-clip-text text-transparent md:text-[19px] lg:text-[21px]">
+                  Frameworks/Libraries
+                </h1>
+              </div>
+              <div className="flex flex-wrap justify-around items-center gap-12 w-[50%]">
+                {PROGRAMMIMG_FRAMWORS.map(({ key, Icon, title }) => (
+                  <div
+                    key={key}
+                    className="text-gray-200 hover:text-teal-400 transition-all duration-500"
+                  >
+                    <Icon className="text-[31px]" />
+                    <p className="text-gray-400 text-[13px]">{title}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="border-l-1 pl-7 mt-12 py-2 border-teal-200">
+              <div className="flex mb-7 items-center gap-6">
+                <div className="bg-white -ml-[35px] w-3 h-3 rounded-full"></div>
+                <h1 className="text-[18px] font-semibold bg-gradient-to-r from-cyan-500 to-cyan-200 bg-clip-text text-transparent md:text-[19px] lg:text-[21px]">
+                  Tools
+                </h1>
+              </div>
+              <div className="flex flex-wrap justify-around items-center gap-14 w-[50%]">
+                {TOOLS.map(({ key, Icon, title }) => (
+                  <div
+                    key={key}
+                    className="text-gray-200 hover:text-teal-400 transition-all duration-500"
+                  >
+                    <Icon className="text-[31px]" />
+                    <p className="text-gray-400 text-[13px]">{title}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="w-[50%]">
+            <div>
+              <div className="-mt-14 -ml-6 flex items-center gap-3">
+                <Image
+                  src={anSofto}
+                  alt="an softo"
+                  width={50}
+                  height={50}
+                  className="rounded-full"
+                />
+                <h1 className="text-[19px] font-semibold bg-gradient-to-r from-cyan-500 to-cyan-200 bg-clip-text text-transparent md:text-[20px] lg:text-[22px]">
+                  An SoftoDev, Pakistan
+                </h1>
+              </div>
+              <div className="border-l-1 pl-6 py-2 mt-5 border-teal-200">
+                <div className="flex items-center gap-6">
+                  <div className="bg-white -ml-[30px] w-3 h-3 rounded-full"></div>
+                  <h1 className="text-[14px] font-semibold text-white md:text-[16px] lg:text-[18px]">
+                    Software Developer
+                  </h1>
                 </div>
-              ))}
+                <p className="text-teal-400 pl-2 mt-1 mb-5 text-[13px]">
+                  Apr 2024 - Jan 2025
+                </p>
+                <div>
+                  <p className="text-gray-400">
+                    ➾ Developed modern web applications using HTML,CSS
+                    JavaScript, contributing to diverse projects like eCommerce
+                    and real estate.
+                  </p>
+                  <p className="text-gray-400 mt-4">
+                    ➾ Implemented responsive UI/UX designs, optimized
+                    performance, and integrated APIs to enhance functionality
+                    and user experience.
+                  </p>
+                  <p className="text-gray-400 mt-5">
+                    ➾ Implemented modern UI/UX principles, animations, and CSS
+                    frameworks like Tailwind CSS and Bootstrap to enhance design
+                    consistency and aesthetics.
+                  </p>
+                </div>
+              </div>
             </div>
+            <div>
+              <div className="mt-4 -ml-6 flex items-center gap-3">
+                <Image
+                  src={anSofto}
+                  alt="an softo"
+                  width={50}
+                  height={50}
+                  className="rounded-full"
+                />
+                <h1 className="text-[19px] font-semibold bg-gradient-to-r from-cyan-500 to-cyan-200 bg-clip-text text-transparent md:text-[20px] lg:text-[22px]">
+                  An SoftoDev, Pakistan
+                </h1>
+              </div>
+              <div className="border-l-1 pl-6 py-2 mt-5 border-teal-200">
+                <div className="flex items-center gap-6">
+                  <div className="bg-white -ml-[30px] w-3 h-3 rounded-full"></div>
+                  <h1 className="text-[14px] font-semibold text-white md:text-[16px] lg:text-[18px]">
+                    Software Developer
+                  </h1>
+                </div>
+                <p className="text-teal-400 pl-2 mt-1 mb-5 text-[13px]">
+                  Apr 2024 - Jan 2025
+                </p>
+                <div>
+                  <p className="text-gray-400">
+                    ➾ Developed modern web applications using HTML,CSS
+                    JavaScript, contributing to diverse projects like eCommerce
+                    and real estate.
+                  </p>
+                  <p className="text-gray-400 mt-4">
+                    ➾ Implemented responsive UI/UX designs, optimized
+                    performance, and integrated APIs to enhance functionality
+                    and user experience.
+                  </p>
+                  <p className="text-gray-400 mt-5">
+                    ➾ Implemented modern UI/UX principles, animations, and CSS
+                    frameworks like Tailwind CSS and Bootstrap to enhance design
+                    consistency and aesthetics.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="mt-5 -ml-6 flex items-center gap-3">
+                <Image
+                  src={anSofto}
+                  alt="an softo"
+                  width={50}
+                  height={50}
+                  className="rounded-full"
+                />
+                <h1 className="text-[19px] font-semibold bg-gradient-to-r from-cyan-500 to-cyan-200 bg-clip-text text-transparent md:text-[20px] lg:text-[22px]">
+                  An SoftoDev, Pakistan
+                </h1>
+              </div>
+              <div className="border-l-1 pl-6 py-2 mt-5 border-teal-200">
+                <div className="flex items-center gap-6">
+                  <div className="bg-white -ml-[30px] w-3 h-3 rounded-full"></div>
+                  <h1 className="text-[14px] font-semibold text-white md:text-[16px] lg:text-[18px]">
+                    Software Developer
+                  </h1>
+                </div>
+                <p className="text-teal-400 pl-2 mt-1 mb-5 text-[13px]">
+                  Apr 2024 - Jan 2025
+                </p>
+                <div>
+                  <p className="text-gray-400">
+                    ➾ Developed modern web applications using HTML,CSS
+                    JavaScript, contributing to diverse projects like eCommerce
+                    and real estate.
+                  </p>
+                  <p className="text-gray-400 mt-4">
+                    ➾ Implemented responsive UI/UX designs, optimized
+                    performance, and integrated APIs to enhance functionality
+                    and user experience.
+                  </p>
+                  <p className="text-gray-400 mt-5">
+                    ➾ Implemented modern UI/UX principles, animations, and CSS
+                    frameworks like Tailwind CSS and Bootstrap to enhance design
+                    consistency and aesthetics.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Education section */}
+      <section className="mt-40 text-gray-400 pb-16 px-10">
+        <h1 className="text-3xl w-[35%] relative group text-white md:text-4xl font-semibold lg:text-5xl">
+          EDUCATION
+          <span className="absolute -bottom-2 left-0 w-0 h-1 transition-all duration-1000 group-hover:w-[20%] bg-teal-400"></span>
+        </h1>
+        <div className="mt-40">
+          <div className="w-[40%]">
+            <div className="w-full">
+              <EducationAni />
+            </div>
+          </div>
+          <div>
+            <EducationCard
+              img={anSofto}
+              title="Virtual University of Pakistan"
+              subTitle="Bachelor of Computer Science"
+              duration="March 2025 - Present"
+              item1="Major: Software Engineering"
+              item2="Grade: 3.78/4 CGPA (A+)"
+            />
           </div>
         </div>
       </section>
       {/* Contact section */}
       <section className="mt-40 text-gray-400 pb-16 px-10">
-        <h1 className="text-3xl relative group text-white md:text-4xl font-semibold lg:text-5xl">
+        <h1 className="text-3xl w-[35%] relative group text-white md:text-4xl font-semibold lg:text-5xl">
           LET&#39;S CONNECT!
           <span className="absolute -bottom-2 left-0 w-0 h-1 transition-all duration-1000 group-hover:w-[20%] bg-teal-400"></span>
         </h1>
