@@ -38,7 +38,7 @@ export default function Home() {
             </h1>
           </div>
           <p className="text-lg mt-5 leading-8 text-gray-400 md:text-xl font-light">
-            Turning ideas into reality—A Pakistani Software Developer on a
+            Turning ideas into reality—A Pakistani Software Engineer on a
             mission to build, innovate, and inspire. Crafting scalable,
             efficient, and user-friendly applications.I offer the best projects
             resulting in quality work.
@@ -339,13 +339,13 @@ export default function Home() {
           EDUCATION
           <span className="absolute -bottom-2 left-0 w-0 h-1 transition-all duration-1000 group-hover:w-[20%] bg-teal-400"></span>
         </h1>
-        <div className="mt-40">
-          <div className="w-[40%]">
+        <div className="mt-40 flex justify-between items-center">
+          <div className="w-[42%]">
             <div className="w-full">
               <EducationAni />
             </div>
           </div>
-          <div>
+          <div className="w-[50.5%]">
             <EducationCard
               img={anSofto}
               title="Virtual University of Pakistan"
