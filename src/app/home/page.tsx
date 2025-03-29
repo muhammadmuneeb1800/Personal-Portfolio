@@ -339,23 +339,52 @@ export default function Home() {
           EDUCATION
           <span className="absolute -bottom-2 left-0 w-0 h-1 transition-all duration-1000 group-hover:w-[20%] bg-teal-400"></span>
         </h1>
-        <div className="mt-40 flex justify-between items-center">
+        <div className="mt-28 flex justify-between items-center">
           <div className="w-[42%]">
             <div className="w-full">
               <EducationAni />
             </div>
           </div>
           <div className="w-[50.5%]">
-            <EducationCard
-              img={anSofto}
-              title="Virtual University of Pakistan"
-              subTitle="Bachelor of Computer Science"
-              duration="March 2025 - Present"
-              item1="Major: Software Engineering"
-              item2="Grade: 3.78/4 CGPA (A+)"
-            />
+            <div>
+              <EducationCard
+                img={anSofto}
+                title="Virtual University of Pakistan"
+                subTitle="Bachelor of Computer Science"
+                duration="March 2025 - Present"
+                item1="Major: Software Engineering"
+                item2="Grade: 3.78/4 CGPA (A+)"
+              />
+            </div>
+            <div className="mt-10">
+              <EducationCard
+                img={anSofto}
+                title="Virtual University of Pakistan"
+                subTitle="Bachelor of Computer Science"
+                duration="March 2025 - Present"
+                item1="Major: Software Engineering"
+                item2="Grade: 3.78/4 CGPA (A+)"
+              />
+            </div>
+            <div className="mt-10">
+              <EducationCard
+                img={anSofto}
+                title="Virtual University of Pakistan"
+                subTitle="Bachelor of Computer Science"
+                duration="March 2025 - Present"
+                item1="Major: Software Engineering"
+                item2="Grade: 3.78/4 CGPA (A+)"
+              />
+            </div>
           </div>
         </div>
+      </section>
+      {/* Achivment Section */}
+      <section className="mt-40 text-gray-400 pb-16 px-10">
+        <h1 className="text-3xl w-[35%] relative group text-white md:text-4xl font-semibold lg:text-5xl">
+          Achievements
+          <span className="absolute -bottom-2 left-0 w-0 h-1 transition-all duration-1000 group-hover:w-[20%] bg-teal-400"></span>
+        </h1>
       </section>
       {/* Contact section */}
       <section className="mt-40 text-gray-400 pb-16 px-10">

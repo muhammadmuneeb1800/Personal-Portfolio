@@ -19,7 +19,7 @@ export default function EducationCard({
   item2,
 }: imageProps) {
   return (
-    <div className="w-full bg-gradient-to-br from-slate-900 to-slate-950 p-6 rounded-3xl backdrop-blur-lg">
+    <div className="w-full hover:bg-gradient-to-br hover:border hover:border-gray-50 from-slate-900 to-slate-950 p-6 rounded-3xl backdrop-blur-lg">
       <div className="flex items-center gap-3">
         <Image
           src={img}
