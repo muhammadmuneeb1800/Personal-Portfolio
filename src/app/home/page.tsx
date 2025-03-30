@@ -437,7 +437,7 @@ export default function Home() {
                 />
               </div>
               <div className="mt-3">
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">Emails</label>
                 <input
                   required
                   id="email"
@@ -446,7 +446,7 @@ export default function Home() {
                 />
               </div>
               <div className="mt-3">
-                <label htmlFor="text">Message</label>
+                <label htmlFor="text">Messages</label>
                 <textarea
                   required
                   id="text"
@@ -459,7 +459,7 @@ export default function Home() {
                 type="submit"
                 className="w-full mb-5 text-white font-semibold bg-teal-400 py-2 rounded-md mt-4"
               >
-                Send Message
+                Send Messages
               </button>
             </form>
           </div>
