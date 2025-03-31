@@ -379,6 +379,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section>
+        start new section
+      </section>
       {/* Achivment Section */}
       <section className="mt-40 text-gray-400 pb-16 px-10">
         <h1 className="text-3xl w-[35%] relative group text-white md:text-4xl font-semibold lg:text-5xl">
