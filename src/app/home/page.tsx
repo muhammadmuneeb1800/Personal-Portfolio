@@ -16,6 +16,10 @@ import Stats from "@/components/counter/Counter";
 import { FaGithub } from "react-icons/fa6";
 import EducationAni from "@/components/educationAni/EducationAni";
 import EducationCard from "@/components/educationCard/EducationCard";
+import ProjectCard from "@/components/projectCard/ProjectCard";
+import { FaReact } from "react-icons/fa";
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
+import morley from "../../../public/images/morley.png";
 
 export default function Home() {
   const number = "923251191492";
@@ -352,18 +356,8 @@ export default function Home() {
                 title="Virtual University of Pakistan"
                 subTitle="Bachelor of Computer Science"
                 duration="March 2025 - Present"
-                item1="Major: Software Engineering"
-                item2="Grade: 3.78/4 CGPA (A+)"
-              />
-            </div>
-            <div className="mt-10">
-              <EducationCard
-                img={anSofto}
-                title="Virtual University of Pakistan"
-                subTitle="Bachelor of Computer Science"
-                duration="March 2025 - Present"
-                item1="Major: Software Engineering"
-                item2="Grade: 3.78/4 CGPA (A+)"
+                item1="Major: Computer Science"
+                item2="Grade: ----"
               />
             </div>
             <div className="mt-10">
@@ -380,15 +374,67 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
-        start new section
-      </section>
       {/* Achivment Section */}
       <section className="mt-40 text-gray-400 pb-16 px-10">
         <h1 className="text-3xl w-[35%] relative group text-white md:text-4xl font-semibold lg:text-5xl">
           Achievements
           <span className="absolute -bottom-2 left-0 w-0 h-1 transition-all duration-1000 group-hover:w-[20%] bg-teal-400"></span>
         </h1>
+      </section>
+      {/* Projects Section */}
+      <section className="mt-40 text-gray-400 pb-16 px-10">
+        <h1 className="text-3xl w-[18%] relative group text-white md:text-4xl font-semibold lg:text-5xl">
+          Projects
+          <span className="absolute -bottom-2 left-0 w-0 h-1 transition-all duration-1000 group-hover:w-[20%] bg-teal-400"></span>
+        </h1>
+        <div className="flex flex-wrap mt-16 px-5">
+          <ProjectCard
+            img={morley}
+            title="Morley College London"
+            Icon1={FaReact}
+            Icon2={RiTailwindCssFill}
+            Icon3={RiNextjsFill}
+            para="Recreated the Morley College website using modern web technologies, ensuring pixel-perfect design and responsive layout. This project demonstrates expertise in frontend development, UI/UX design, and performance optimization. The clone accurately reflects the original site's structure, styling, and interactivity, making it a great showcase of web development skills."
+            git="https://github.com/muhammadmuneeb1800/Morlay-College/tree/main"
+            link="https://morlay-college.vercel.app/"
+          />
+          <div className="w-full">
+            <ProjectCard
+              img={morley}
+              title="Morley College London"
+              Icon1={FaReact}
+              Icon2={RiTailwindCssFill}
+              Icon3={RiNextjsFill}
+              para="Recreated the Morley College website using modern web technologies, ensuring pixel-perfect design and responsive layout. This project demonstrates expertise in frontend development, UI/UX design, and performance optimization. The clone accurately reflects the original site's structure, styling, and interactivity, making it a great showcase of web development skills."
+              git="https://github.com/muhammadmuneeb1800/Morlay-College/tree/main"
+              link="https://morlay-college.vercel.app/"
+            />
+          </div>
+          <div>
+            <ProjectCard
+              img={morley}
+              title="Morley College London"
+              Icon1={FaReact}
+              Icon2={RiTailwindCssFill}
+              Icon3={RiNextjsFill}
+              para="Recreated the Morley College website using modern web technologies, ensuring pixel-perfect design and responsive layout. This project demonstrates expertise in frontend development, UI/UX design, and performance optimization. The clone accurately reflects the original site's structure, styling, and interactivity, making it a great showcase of web development skills."
+              git="https://github.com/muhammadmuneeb1800/Morlay-College/tree/main"
+              link="https://morlay-college.vercel.app/"
+            />
+          </div>
+          <div>
+            <ProjectCard
+              img={morley}
+              title="Morley College London"
+              Icon1={FaReact}
+              Icon2={RiTailwindCssFill}
+              Icon3={RiNextjsFill}
+              para="Recreated the Morley College website using modern web technologies, ensuring pixel-perfect design and responsive layout. This project demonstrates expertise in frontend development, UI/UX design, and performance optimization. The clone accurately reflects the original site's structure, styling, and interactivity, making it a great showcase of web development skills."
+              git="https://github.com/muhammadmuneeb1800/Morlay-College/tree/main"
+              link="https://morlay-college.vercel.app/"
+            />
+          </div>
+        </div>
       </section>
       {/* Contact section */}
       <section className="mt-40 text-gray-400 pb-16 px-10">
